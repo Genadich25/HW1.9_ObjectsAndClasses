@@ -1,5 +1,7 @@
 package ru.lookBag;
 
+import java.util.Objects;
+
 public class Author {
     String firstName;
     String secondName;
@@ -24,11 +26,21 @@ public class Author {
     }
 
     @Override
+    public String toString(){
+        return firstName + " " + secondName;
+    }
+
+    @Override
     public boolean equals(Object obj){
         if(this.getClass() != obj.getClass()){
             return false;
         }
         Author author = (Author) obj;
         return fullName.equals(author.fullName);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(fullName);
     }
 }

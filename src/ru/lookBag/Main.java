@@ -30,6 +30,5 @@ public class Main {
     Library.printNameBook("Преступление и наказание");
     Library.changeYearPublicationByNameBook("Преступление и наказание","1888");
     Library.printNameBook("Преступление и наказание");
-
     }
 }

@@ -1,5 +1,7 @@
 package ru.lookBag;
 
+import java.util.Objects;
+
 public class Book {
     String yearPublication;
     String publisherName;
@@ -23,11 +25,6 @@ public class Book {
         return yearPublication;
     }
 
-    public void readBook(){
-        System.out.println("Год публикации книги: " + yearPublication);
-        System.out.println("Название книги: " + publisherName);
-        System.out.println("Автор: " + authorName.getFullName());
-    }
 
     public void setYearPublication(String yearPublication) {
         this.yearPublication = yearPublication;
@@ -49,4 +46,10 @@ public class Book {
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(authorName, publisherName, yearPublication);
+    }
 }
+
