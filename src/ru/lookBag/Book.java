@@ -3,9 +3,9 @@ package ru.lookBag;
 import java.util.Objects;
 
 public class Book {
-    String yearPublication;
-    String publisherName;
-    Author authorName;
+    private String yearPublication;
+    private String publisherName;
+    private Author authorName;
 
     public Book(String yearPublication, String publisherName, Author authorName){
         this.authorName = authorName;
@@ -14,7 +14,7 @@ public class Book {
     }
 
     public Author getAuthorName() {
-        return authorName;
+        return this.authorName;
     }
 
     public String getPublisherName() {
@@ -22,7 +22,7 @@ public class Book {
     }
 
     public String getYearPublication() {
-        return yearPublication;
+        return this.yearPublication;
     }
 
 

@@ -1,7 +1,7 @@
 package ru.lookBag;
 
 public class Library {
-    Book[] Library;
+    private Book[] Library;
 
     public Library(Book[] Library){
         this.Library = Library;
@@ -18,7 +18,7 @@ public class Library {
 
     public void printNameBook(String publisherName){
         for (int i = 0; i < Library.length; i++) {
-            if (Library[i].publisherName.equals(publisherName)) {
+            if (Library[i].getPublisherName().equals(publisherName)) {
                 System.out.println(Library[i].toString());
             }
         }
@@ -26,9 +26,9 @@ public class Library {
 
     public void changeYearPublicationByNameBook(String publisherName, String yearPublication){
         for (int i = 0; i < Library.length; i++) {
-            if (Library[i].publisherName.equals(publisherName)) {
-                Library[i].yearPublication = yearPublication;
-                System.out.println("Год публикации книги \"" + Library[i].publisherName + "\" был изменен на " + yearPublication);
+            if (Library[i].getPublisherName().equals(publisherName)) {
+                Library[i].setYearPublication(yearPublication);
+                System.out.println("Год публикации книги \"" + Library[i].getYearPublication() + "\" был изменен на " + yearPublication);
                 break;
             }
             if(i == Library.length - 1){
