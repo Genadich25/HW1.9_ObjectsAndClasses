@@ -42,7 +42,9 @@ public class Book {
         }
         Book book = (Book) other;
         if(this.authorName.equals(book.authorName)){
-            return this.publisherName.equals(book.publisherName);
+            if (this.publisherName.equals(book.publisherName)){
+                return this.yearPublication.equals((book.yearPublication));
+            };
         }
         return false;
     }
