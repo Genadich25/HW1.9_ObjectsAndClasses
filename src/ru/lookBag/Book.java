@@ -30,28 +30,5 @@ public class Book {
         this.yearPublication = yearPublication;
     }
 
-    @Override
-    public String toString(){
-        return authorName.getFullName() + " | " + publisherName + " | " + yearPublication;
-    }
-
-    @Override
-    public boolean equals(Object other) {
-        if(this.getClass() != other.getClass()){
-            return false;
-        }
-        Book book = (Book) other;
-        if(this.authorName.equals(book.authorName)){
-            if (this.publisherName.equals(book.publisherName)){
-                return this.yearPublication.equals((book.yearPublication));
-            };
-        }
-        return false;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(authorName, publisherName, yearPublication);
-    }
 }
 
